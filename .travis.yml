@@ -4,10 +4,10 @@ git:
 jdk:
   - oraclejdk8
 dist: trusty
-script:
+install:
   - mvn -P '!swt-unix,swt-windows' help:active-profiles org.apache.maven.plugins:maven-dependency-plugin:3.0.1:tree package
 #  - mvn help:active-profiles org.apache.maven.plugins:maven-dependency-plugin:3.0.1:tree package
 after_success:
-  - unzip -l target/test-dep-0.0.1-SNAPSHOT-runnable-linux.zip 
-#  - unzip -l target/test-dep-0.0.1-SNAPSHOT-runnable-windows.zip 
+  - unzip -l target/test-dep-0.0.1-SNAPSHOT-runnable-windows.zip 
+#  - unzip -l target/test-dep-0.0.1-SNAPSHOT-runnable-linux.zip 
 
