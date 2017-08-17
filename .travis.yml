@@ -9,5 +9,7 @@ install:
 #  - mvn help:active-profiles org.apache.maven.plugins:maven-dependency-plugin:3.0.1:tree package
 after_success:
   - unzip -l target/test-dep-0.0.1-SNAPSHOT-runnable-windows.zip 
+  - unzip target/test-dep-0.0.1-SNAPSHOT-runnable-windows.zip test-dep-0.0.1-SNAPSHOT/test-dep-0.0.1-SNAPSHOT.jar
+  - unzip -c test-dep-0.0.1-SNAPSHOT/test-dep-0.0.1-SNAPSHOT.jar META-INF/MANIFEST.MF
 #  - unzip -l target/test-dep-0.0.1-SNAPSHOT-runnable-linux.zip 
 
