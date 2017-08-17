@@ -21,7 +21,7 @@
 				</os>
 			</activation>
 			<properties>
-				<guava.version>22.0</guava.version>
+				<bcprov>bcprov-jdk15on</bcprov>
 				<env>linux</env>
 			</properties>
 		</profile>
@@ -33,7 +33,7 @@
 				</os>
 			</activation>
 			<properties>
-				<guava.version>20.0</guava.version>
+				<bcprov>bcprov-jdk14</bcprov>
 				<env>windows</env>
 			</properties>
 		</profile>
@@ -41,9 +41,9 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>com.google.guava</groupId>
-			<artifactId>guava</artifactId>
-			<version>${guava.version}</version>
+			<groupId>org.bouncycastle</groupId>
+			<artifactId>${bcprov}</artifactId>
+			<version>1.57</version>
 		</dependency>
 	</dependencies>
 
