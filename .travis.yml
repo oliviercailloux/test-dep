@@ -5,7 +5,7 @@ jdk:
   - oraclejdk8
 dist: trusty
 install:
-  - mvn -P '!swt-unix,swt-windows' help:active-profiles org.apache.maven.plugins:maven-dependency-plugin:3.0.1:tree package
+  - mvn -P '!swt-unix,swt-windows' help:active-profiles dependency:tree org.apache.maven.plugins:maven-dependency-plugin:3.0.1:tree package
 #  - mvn help:active-profiles org.apache.maven.plugins:maven-dependency-plugin:3.0.1:tree package
 after_success:
   - unzip -l target/test-dep-0.0.1-SNAPSHOT-runnable-windows.zip 
